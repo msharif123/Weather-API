@@ -4,7 +4,12 @@ const Header = ()=>{
 
 
     return(
-        <h5>hello header</h5>
+        
+        <div className="header">   
+              
+        <h1> Wether app</h1>
+        
+        </div>
 
 
     )
