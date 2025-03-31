@@ -24,8 +24,13 @@ import humidityIco from "../../assets/humidity.png"
    const [favorites, setFavorites] = useState([]);
 
    useEffect(() => {
-     setFavorites(JSON.parse(localStorage.getItem('')) || []);
+     setFavorites(JSON.parse(localStorage.getItem("") ) || []);
+
+
+     
    }, []);
+
+   
 
    const searchCity = async () => {
      try {
@@ -38,8 +43,7 @@ import humidityIco from "../../assets/humidity.png"
    };
       
    const FavoriteCity = (city) => {
-     const updatedFavorites = favorites.includes(city) 
-       ? favorites.filter(FavoriteCitycity => FavoriteCitycity !== city)
+     const updatedFavorites = favorites.includes(city)  ? favorites.filter(FavoriteCitycity => FavoriteCitycity !== city)
        : [...favorites, city];
      setFavorites(updatedFavorites);
      localStorage.setItem('favoriteCities', JSON.stringify(updatedFavorites));
@@ -57,7 +61,7 @@ import humidityIco from "../../assets/humidity.png"
        <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter City Name" /> <br />
        <button onClick={searchCity}>Search</button> <br /> <br /> <br />
        <button onClick={() => FavoriteCity(city)}> 
-         {favorites.includes(city) ? 'Remove from Favorites' : 'Add to Favorites'}
+         {favorites.includes(city) ? 'Remove from Favorites' : 'Add  Favorites'}
        </button>
 
        {error && <p>{error}</p>}
@@ -74,7 +78,7 @@ import humidityIco from "../../assets/humidity.png"
 
   <h3>Favorites</h3>
   <ul>
-    {favorites.map((city, idx) => <li key={idx}>{city}</li>)}
+    {favorites.map((city, idx) => <ol key={idx}>{city}</ol>)}
   </ul>
 </div>
 )}
@@ -86,7 +90,7 @@ import humidityIco from "../../assets/humidity.png"
             <p> <img src="src/assets/cloud.jpg" alt="" />
             <h3> Cloud: {weather.clouds.all}% </h3></p>
             <p> <img src="src/assets/wind.jpg" alt="" />
-            <h3>Wind Speed: {weather.wind?.speed}m/s </h3> </p>
+            <h3>Wind Speed: {weather.wind?.speed} m/s </h3> </p>
             
                  
            </div>
@@ -102,7 +106,7 @@ import humidityIco from "../../assets/humidity.png"
            {forecast.slice(0, 5).map((forecastItem, index) => (
 
              <div key={index}>
-              <p>  {new Date (forecastItem.dt*1000).toDateString()} : <br />  Temp -{forecastItem.main.temp}°C - Cloud {forecastItem.clouds.all}% - "Speed" {forecastItem.wind.speed}m/s "Wind-Speed"  </p>
+              <p>  {new Date (forecastItem.dt*1000).toDateString()} : <br /> Temp {forecastItem.main.temp}°C - Cloud {forecastItem.clouds.all}% - Wind Speed {forecastItem.wind.speed} m/s </p>
               
 
            

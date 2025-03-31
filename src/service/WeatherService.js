@@ -37,7 +37,7 @@ export const getWeatherForecast = async (city) => {
 
     const data = await response.json();
 
-    return data.list.filter((_ , index) => index % 8 === 0); // 8th entry corresponds to each day at 12:00 PM
+    return data.list.filter((_ , index) => index % 8 === 0); 
   } catch (error) {
     console.error("Error fetching forecast data:", error);
     throw error;

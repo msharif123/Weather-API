@@ -48,17 +48,21 @@ background-color: white;
     flex-direction: row;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align:center;
+    justify-content:center;
+    padding:10px    ;
+    margin:10px ;
+    
   
-    text-align:center;
-    justify-content: space-between;
-  
+   
    
 }
 
 h3{
-    background-color:white;
+  
     font-size: 15px;
     margin: 5px;
+    color: black;
 }
 
 .days{
