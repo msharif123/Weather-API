@@ -2,6 +2,7 @@
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
+import Weather from './components/Weather/Weather'
 
 const App= ()=>{
   
@@ -11,7 +12,8 @@ const App= ()=>{
     <>
    
 
-    <Header/>
+    <Header/> 
+    <Weather/>
     <Footer/>
     </>
   )

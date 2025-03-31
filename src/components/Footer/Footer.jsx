@@ -1,10 +1,12 @@
 
 
+import "./Footer.css"
+
 const Footer= ()=>{
     return(   
 
 
-      <>  <h5>hello footer </h5>
+      <>  
 
       
       

@@ -10,7 +10,7 @@ const Header = ()=>{
         
         <div className="header">   
               
-        <h1> Wether app</h1>
+        <h1> Weather App</h1>
         
         </div>
 

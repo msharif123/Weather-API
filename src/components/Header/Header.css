@@ -1,11 +1,14 @@
-.header{
+ .header{
 
-    background-color: blue;
+  
     font-size: medium;
     text-align: center;
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  
     
-}
+} 
+
