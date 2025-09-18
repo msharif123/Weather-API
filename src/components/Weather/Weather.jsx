@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search/Search"
+import "../../components/Weather/weather.css"
+
+
 import Favorite from "../Favorite/Favorite";
 import { getWeatherData, getWeatherForecast } from "../../service/WeatherService"
-import "./weather.css";
+
 
 
 const Weather = () => {

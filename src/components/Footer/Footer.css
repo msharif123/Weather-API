@@ -1,14 +1,23 @@
 /* Footer.css */
 
 .footer {
+  width: 100vw;
+  /* Full screen width */
   background-color: #2196f3;
   color: white;
   text-align: center;
   padding: 15px 20px;
-  margin-top: 40px;
+  margin-top: auto;
+  /* Ensures it sticks to bottom in flex layout */
   border-top: 2px solid #1976d2;
   font-size: 0.95rem;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+
+  /* Prevent horizontal scroll issues on small screens */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
 }
 
 .footer p {
@@ -17,7 +26,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Optional: Responsive tweak */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .footer {
     font-size: 0.85rem;
