@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search/Search"
-import "./Weather.css"
-
+import "../../components/weather/Weather"
 
 
 import Favorite from "../Favorite/Favorite";
