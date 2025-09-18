@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Search from "../Search/Search"
-import "./Weather.module.css";
-
-
+import Search from "../Search/Search";
+import styles from "./Weather.module.css";  // <-- import styles properly
 
 import Favorite from "../Favorite/Favorite";
-import { getWeatherData, getWeatherForecast } from "../../service/WeatherService"
-
-
+import { getWeatherData, getWeatherForecast } from "../../service/WeatherService";
 
 const Weather = () => {
   const [weather, setWeather] = useState(null);
@@ -48,12 +44,12 @@ const Weather = () => {
   }, [favorites]);
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Search onSearchCity={handleSearch} />
-      {error && <p>{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
 
       {weather && (
-        <div className="details">
+        <div className={styles.details}>
           <h2>{weather.name}</h2>
           <img
             src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
@@ -63,16 +59,21 @@ const Weather = () => {
           <p>Cloud: {weather.clouds.all}%</p>
           <p>Wind Speed: {weather.wind.speed} m/s</p>
 
-          <button onClick={() => myFavorite(weather.name)}>
-            {favorites.includes(weather.name) ? 'Remove from Favorites' : 'Add to Favorites'}
+          <button
+            className={styles.favoriteButton}
+            onClick={() => myFavorite(weather.name)}
+          >
+            {favorites.includes(weather.name)
+              ? "Remove from Favorites"
+              : "Add to Favorites"}
           </button>
         </div>
       )}
 
       {forecast && (
-        <div className="forecast">
+        <div className={styles.forecast}>
           {forecast.slice(0, 5).map((item, index) => (
-            <div key={index}>
+            <div className={styles.forecastItem} key={index}>
               <img
                 src={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`}
                 alt="weather-icon"
