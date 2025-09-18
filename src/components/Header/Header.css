@@ -1,14 +1,72 @@
- .header{
+/* Header.css */
 
-  
-    font-size: medium;
+.header {
+    width: 100vw;
+    /* Full viewport width */
+    background: linear-gradient(135deg, #2196f3, #21cbf3);
+    color: white;
+    padding: 20px 0;
+    /* Remove side padding */
     text-align: center;
-    box-sizing: border-box;
-    width: 100%;
-    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     margin: 0;
-    padding: 0;
-  
-    
-} 
+    /* Ensure no margin from outside */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    /* Fix horizontal overflow on smaller screens */
+}
 
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive font size */
+@media (max-width: 1200px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Header.css */
+
+.header {
+    width: 100vw;
+    /* Full width of viewport */
+    background: linear-gradient(135deg, #2196f3, #21cbf3);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    /* Prevent horizontal overflow issues */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,21 +1,13 @@
+import "./Footer.css";
 
-
-import "./Footer.css"
-
-const Footer= ()=>{
-    return(   
-
-
-      <>  
-
-      
-      
+const Footer = () => {
+  return (
+    <>
       <footer className="footer">
-      <p>&copy; {new Date ().getFullYear()} weather app</p>
+        <p>&copy; {new Date().getFullYear()} Weather App</p>
       </footer>
-      
-      </> )
-}
+    </>
+  );
+};
 
-
-export default Footer
+export default Footer;

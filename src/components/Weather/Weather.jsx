@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search/Search"
 import Favorite from "../Favorite/Favorite";
-import {getWeatherData, getWeatherForecast} from"../../service/WeatherService"
+import { getWeatherData, getWeatherForecast } from "../../service/WeatherService"
 import "./weather.css";
 
 
