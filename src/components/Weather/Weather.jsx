@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search/Search"
-import "./weather.css"
+import "./Weather.css"
 
 
 
