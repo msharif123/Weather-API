@@ -4,17 +4,17 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
 
-const App= ()=>{
-  
+const App = () => {
 
-  return(
+
+  return (
 
     <>
-   
 
-    <Header/> 
-    <Weather/>
-    <Footer/>
+
+      <Header />
+      <Weather />
+      <Footer />
     </>
   )
 }

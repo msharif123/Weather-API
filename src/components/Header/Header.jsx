@@ -1,22 +1,22 @@
 
 
-import "./Header.css"
+// import "./Header.css"
 
 
-const Header = ()=>{
+// const Header = ()=>{
 
 
-    return(
+//     return(
         
-        <div className="header">   
+//         <div className="header">   
               
-        <h1> Weather App</h1>
+//         <h1> Weather App</h1>
         
-        </div>
+//         </div>
 
 
-    )
-}
+//     )
+// }
 
 
-export default Header
+// export default Header
