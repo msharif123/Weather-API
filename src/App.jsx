@@ -2,7 +2,7 @@ import Favorite from "./components/Favorite/Favorite";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 // import Search from "./components/Search/Search";
-import Weather from "./components/weather/Weather.jsx";
+import Weather from "./components/weather_fix/Weather.jsx";
 import './App.css'; // Make sure this is imported
 
 const App = () => {
