@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./Search.css";
+
 
 const Search = ({ onSearchCity }) => {
   const [city, setCity] = useState("");
@@ -7,7 +9,7 @@ const Search = ({ onSearchCity }) => {
     e.preventDefault();
     if (city) {
       onSearchCity(city);
-      setCity(""); // Clear the input field after search
+      setCity("");
     }
   };
 
